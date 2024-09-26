@@ -1,0 +1,1 @@
+web: java -jar build/libs/dev-bella-project-bank-0.0.1-SNAPSHOT.jar
