@@ -1,21 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgres.railway.internal:5432/railway
-    username: postgres
-    password: PIPxaVEwQhoNhUwRjreFUvzvQbzEdDSA
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
   jpa:
     open-in-view: false
     hibernate:
       ddl-auto: create
-
-      # Ou altere para 'validate' se estiver apenas validando o esquema
-      #spring:
-#  datasource:
-#    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-#    username: ${PGUSER}
-#    password: ${PGPASSWORD}
-#  jpa:
-#    open-in-view: false
-#    hibernate:
-#      ddl-auto: create
+      dialect: org.hibernate.dialect.PostgreSQLDialect
       #validate
